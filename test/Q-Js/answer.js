@@ -1,21 +1,23 @@
 function findMissingNumber(nums) {
   const n = nums.length;
-  
-  let expectedXOR = 0;
-  
-  for (let i = 0; i <= n; i++) {
-    expectedXOR ^= i;
-  }
-  
-  let actualXOR = 0;
+  let expectedSum = (n * (n + 1)) / 2;
+  let actualSum = 0;
+
   for (const num of nums) {
-    actualXOR ^= num;
+    actualSum += num;
   }
-  
-  return expectedXOR ^ actualXOR;
+
+  return expectedSum - actualSum;
 }
 
 
-console.log(findMissingNumber([3, 0, 1])); // Output: 2
-console.log(findMissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); // Output: 8
-console.log(findMissingNumber([0, 1])); // Output: 2
+const nums1 = [3, 0, 1];
+console.log(findMissingNumber(nums1)); // Output: 2
+
+
+const nums2 = [9, 6, 4, 2, 3, 5, 7, 0, 1];
+console.log(findMissingNumber(nums2)); // Output: 8
+
+
+const nums3 = [0, 1];
+console.log(findMissingNumber(nums3)); // Output: 2
