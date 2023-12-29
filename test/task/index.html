@@ -1,60 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9789759535.js" crossorigin="anonymous"></script>
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="./styles/body-style.css">
+  <link rel="stylesheet" href="./styles/header-style.css">
+  <link rel="stylesheet" href="./styles/article-style.css">
+  <link rel="stylesheet" href="./styles/footer-style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="container">
-               
-                <ul>
-                    <i class="fa-solid fa-house active"></i>
-                    <li ><a href="#home" class="active">Home</a></li>
-                    <i class="fa-solid fa-user"></i>
-                    <li><a href="#aboteMe">About Me</a></li>
-                    <i class="fa-solid fa-phone"></i>
-                    <li><a href="#Contact" class="contact">Contact Me</a></li>
-               
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="nav-container">
+      <div><a href="" onclick="showHome(event)" id="nav1"><i class="fa-solid fa-house"></i> Home</a></div>
+      <div><a href="" onclick="showAboutMe(event)" id="nav2"><i class="fa-solid fa-user"></i> About Me</a></div>
+      <div><a href="" onclick="showContact(event)" id="nav3"><i class="fa-solid fa-phone"></i> Contact Me</a>
+      </div>
+    </nav>
+  </header>
+  <article class="article-container">
+    <div class="left-sub-container">
+      <div id="home">
+        <section>
+          <h2>Welcome to my site</h2>
+        </section>
+        <section>
+          <h1>Hi, I'm Leen a Frontend and Backend <span>Developer</span></h1>
+        </section>
+        <section>
+          <p>I am in my final year and I am very enthusiastic, energetic and have a passion for technology. that will
+            allow me to
+            kickstart my career and make a real impact on enhancing the customer experience.<a class="see-more"
+              onclick="showMore(event)" id="more-link">See
+              More..</a>
+          </p>
+          <div id="more">
+            <h3>Personal Information</h3>
+            <ul>
+              <li>Date of birth: 13. 12. 2001</li>
+              <li>Marital status: Bachelor</li>
+              <li>Languages: Arabic , English</li>
+              <li>Nationality: Palestinian</li>
+            </ul>
+            <h3>Education</h3>
+            <dl>
+              <dt>Palestine Technical University - Kadoorie.</dt>
+              <dd>- July 2029 ▪ B.Sc. of Computer Engineering</dd>
+            </dl>
+          </div>
+        </section>
+      </div>
+      <div id="about-me">
+        <section>
+          <h1>About Me</h1>
+        </section>
+        <section>
+          <p>
+          <h2>EXPERIENCE</h2>
+          I completed a training program at EXALT Technologies as a Frontend and Backend engineer, acquiring
+          the following skills:
+          <ul>
+            <li> Frontend training covered HTML, CSS, and JavaScript, with practical experience in
+              React.</li>
+            <li> Backend training focused on ASP.net , API development, and request body validation.
+            </li>
 
-    <section class="main">
-        <div class="one">
-        <p class="desc"> Welcome to my Site </p>
-        <h1>Hi, I am Leen, a frontend <span>developer</span> </h1>
-        <p class="about-me">
-            Iam focused on talented B.Sc.CSIT student currently pursuing my bechelor degree from Asian  
-            School of management and Technology.<span>See More..</span>
-        </p>
+            <li> Ensured smooth communication between Frontend and Backend using Axios library.</li>
+          </ul>
+          </p>
+        </section>
+      </div>
+      <div id="contact">
+        <section>
+          <h1>Contact</h1>
+        </section>
+        <section>
+
+          <p><i class="fa-solid fa-phone"></i> <span>Phone:</span> <a href="tel:+970566885070" target="_blank">+972
+              594324473</a></p>
+          <p><i class="fa-solid fa-envelope"></i> <span>Email:</span> <a href="mailto:layan4saed@gmail.com"
+              target:_blank;>leenodeh287@gmail.com</a></p>
+        </section>
+      </div>
     </div>
-    <div>
-        <img src="./assets/img.png" alt="my-img"/>
+    <div class="right-sub-container">
+      <section></section>
     </div>
-
-    </section>
-    <section>
-        <button class="btn1">
-Hire Me!
-        </button>
-        <button class="btn2">
-See My Project
-        </button>
-    </section>
-
-
-
-
-  
-  
-
-
-   
+  </article>
+  <footer>
+    <a class="button" href="mailto:leenodeh287@gmail.com">Hire me!</a>
+    <a class="button button2" target="_blank" href="https://github.com/Leen-odeh3">See My Project</a>
+  </footer>
 </body>
-</html> 
+
+</html>
